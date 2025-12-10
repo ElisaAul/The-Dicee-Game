@@ -2,6 +2,8 @@
     text-align: center;
     margin-top: 150px;
     text-align: center;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px auto 50px; 
 }
 
 body {
@@ -9,44 +11,96 @@ body {
   text-align: center;
 }
 
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 30px auto;
+    max-width: 856px;
+}
+
+.players p {
+    padding: 15px;
+    border-radius: 10px;
+}
+/*button + button border*/
 button {
   margin-top: 30px;
   padding: 20px 40px;
   font-size: 1rem;
   font-family: 'Manrope', sans-serif;
-  background: linear-gradient(to right, #FF9075, #454EFF);
+  border: 3px solid transparent;
+  background: linear-gradient(#0E0D0F, #0E0D0F) padding-box,
+              linear-gradient(to right, #FF9075, #454EFF) border-box;
+  background-size: 200% 100%;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  outline: none;
+  position: relative;
+  border-radius: 5px;
   border-radius: 10px;
-  border-color: 1px solid white;
-  color: white;
+  color: #FF9075;
   cursor: pointer;
   font-weight: 600;
+  width: 200px;
+  outline: none;
+  animation: gradientShift 3s linear infinite;
+    transition: box-shadow 160ms ease, transform 160ms ease;
 }
+button:hover {
+  box-shadow: 0 14px 40px rgba(78,78,255,0.28);
+  background: linear-gradient(#0E0D0F, #0E0D0F) padding-box,
+              linear-gradient(to right, #FF9075, #454EFF) border-box;
+  background-size: 200% 100%;
+  background-size: 200% 100%;
+}
+
+button.is-clicked {
+  box-shadow: 0 14px 40px rgba(78,78,255,0.28);
+}
+
 h1 {
-  margin: 30px;
+  margin-top: 218px;
   font-family: 'Manrope', sans-serif;
-  font-size: 8rem;
+  font-size: 5rem;
   background: linear-gradient(to right, #FF9075, #454EFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 800;
+  background-clip: text;
+  font-weight: 600;
+  margin-bottom: 0;
+  background-size: 200% 100%; 
+  background-position: 0% 50%;
+  /*animation*/
+  animation: gradientShift 3s linear infinite;
+
 }
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 h2 {
-  font-size: 3rem;
-  color: #ffffff;
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-}
-
-p {
   font-size: 2rem;
   color: #ffffff;
   font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-weight: lighter;
 }
 
 img {
-  width: 80%;
+  width: 100%;
 }
 
 footer {
@@ -56,3 +110,4 @@ footer {
   font-family: 'Manrope', sans-serif;
   font-weight: lighter;
 }
+
