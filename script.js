@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     imgs.forEach((img, index) => {
       const roll = getRandom();
       rolls.push(roll);
-      img.src = `images/dice${roll}.png`;
+      img.src = `images/Dice${roll}.png`;
     });
 
     //max Roll to determine Winner
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         winners.push(index + 1);
 
         // change Winner Dice Color
-        imgs[index].src = `images/dice${roll}Win.png`;
+        imgs[index].src = `images/Dice${roll}Win.png`;
       }
          });
 
