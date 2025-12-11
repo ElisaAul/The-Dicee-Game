@@ -53,10 +53,12 @@ button:hover {
               linear-gradient(to right, #FF9075, #454EFF) border-box;
   background-size: 200% 100%;
   background-size: 200% 100%;
+  transition: box-shadow 160ms ease;
 }
 
 button.is-clicked {
-  box-shadow: 0 14px 40px rgba(78,78,255,0.28);
+  /*box-shadow: 0 14px 40px rgba(78,78,255,0.28);*/
+  transform: scale(0.96);
 }
 
 h1 {
