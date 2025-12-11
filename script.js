@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.addEventListener('click', () => {
     btn.classList.add('is-clicked');
 
-    // remove Winner Class from previous round
+    // remove winner class from previous round
     playerCards.forEach(card => card.classList.remove('winner'));
 
     const rolls = [];
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (winners.length === 2) {
       resultHeading.textContent = `It's a double!`;
     } else {
-      resultHeading.textContent = `It’s a triple!`;
+      resultHeading.textContent = `It's a triple!`;
     }
 
     // timeout to remove the box-shadow effect after animation
